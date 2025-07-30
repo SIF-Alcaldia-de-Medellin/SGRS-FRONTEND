@@ -1,0 +1,83 @@
+.salon-card {
+    border: 1px solid transparent; 
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    margin-bottom: 4%;
+}
+
+.salon-card h3 {
+    margin: 0;
+    display: inline-block; /* Para que el texto se alinee con el estado */
+}
+
+.salon-card p {
+    margin: 5px 0;
+    font-size: 0.7rem;
+    text-align: left;
+    margin-bottom: 3.5%;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.estado-texto {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+/* Estado disponible (verde) */
+.salon-card.disponible {
+    border-color: green;
+}
+
+.salon-card.disponible .estado-texto {
+    background-color: green;
+    color: white;
+}
+
+/* Estado reservado (rojo) */
+.salon-card.reservado {
+    border-color: red;
+}
+
+.salon-card.reservado .estado-texto {
+    background-color: red;
+    color: white;
+}
+
+/* Estado seleccionado (azul) */
+.salon-card.selected {
+    border-color: blue;
+    background-color: #f0f8ff; /* Fondo suave cuando está seleccionado */
+}
+
+.salon-card.selected .estado-texto {
+    background-color: blue;
+    color: white;
+}
+
+/* Responsividad */
+@media (max-width: 1660px) and (max-height: 600px) {
+    .salon-card {
+        width: 60%;
+    }
+
+    .estado-texto {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 992px) {
+    .salon-card {
+        width: 40%;
+    }
+}

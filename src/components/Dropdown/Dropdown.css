@@ -1,0 +1,27 @@
+.dropdown select {
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.dropdown select:disabled{
+    background-color: rgb(206, 206, 206);
+    color: rgb(117, 117, 117);
+    cursor: not-allowed;
+    border: 1px solid #ccc;
+}
+
+.dropdown.primary select{
+    background-color: #1dc2ff;
+    color: #fff;
+    border: none;
+}
+.dropdown.primary select:hover{
+    background-color: #00AEEF;
+    color: #fff;
+}
+.dropdown.primary select:focus{
+    background-color: #0091c7;
+    color: #fff;
+}

@@ -1,0 +1,33 @@
+{
+    "ministries": [
+      { "id": 1, "Nombre": "Secretaría de Desarrollo Económico" },
+      { "id": 2, "Nombre": "Secretaría de Participación Ciudadana" },
+      { "id": 3, "Nombre": "Secretaría de Turismo y Entretenimiento" },
+      { "id": 4, "Nombre": "Secretaría de Medio Ambiente" },
+      { "id": 5, "Nombre": "Secretaría de Inclusión Social y Familia" },
+      { "id": 6, "Nombre": "Secretaría de Gestión y Control Territorial" },
+      { "id": 7, "Nombre": "Secretaría de Educación" },
+      { "id": 8, "Nombre": "Secretaría de Cultura Ciudadana" },
+      { "id": 9, "Nombre": "Secretaría de Evaluación y Control" },
+      { "id": 10, "Nombre": "Secretaría de Innovación Digital" },
+      { "id": 11, "Nombre": "Secretaría de Gestión Humana y Servicio al Ciudadano" },
+      { "id": 12, "Nombre": "Secretaría de Infraestructura Física" },
+      { "id": 13, "Nombre": "Secretaría de Suministros y Servicios" },
+      { "id": 14, "Nombre": "Despacho del Alcalde" },
+      { "id": 15, "Nombre": "Secretaría de Comunicaciones" },
+      { "id": 16, "Nombre": "Secretaría de la Juventud" },
+      { "id": 17, "Nombre": "Secretaría de Movilidad" },
+      { "id": 18, "Nombre": "Secretaría de Paz y Derechos Humanos" },
+      { "id": 19, "Nombre": "DAP" },
+      { "id": 20, "Nombre": "Secretaría de Gobierno y Gestión del Gabinete" },
+      { "id": 21, "Nombre": "Secretaría de Salud" },
+      { "id": 22, "Nombre": "Despacho de la Primera Dama" },
+      { "id": 23, "Nombre": "Secretaría Privada" },
+      { "id": 24, "Nombre": "Secretaría de Seguridad y Convivencia" },
+      { "id": 25, "Nombre": "Secretaría General" },
+      { "id": 26, "Nombre": "Secretaría de Hacienda" },
+      { "id": 27, "Nombre": "Secretaría de las Mujeres" },
+      { "id": 28, "Nombre": "DAGRD" }
+    ]
+  }
+  

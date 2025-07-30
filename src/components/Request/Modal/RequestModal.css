@@ -1,0 +1,180 @@
+.table-request {
+    border-bottom: solid 1px grey;
+    width: 100%;
+    color: black;
+    border-collapse: collapse;
+}
+
+.table-request th,
+.table-request td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.table-request th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+
+.table-request tr {
+    display: table-row;
+}
+
+.table-request td {
+    vertical-align: top;
+}
+
+.modal-inferior {
+    padding: 8px;
+    border: 1px solid grey;
+    box-shadow: 0 7px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    gap: 5px;
+}
+
+.botones-container {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0.5% 0;
+    gap: 5px;
+}
+
+.accept-reject-buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.botones,
+.agendarBoton,
+.rechazarBoton {
+    max-width: 10%;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.botones {
+    background-color: #3366CC;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.botones:hover {
+    background-color: #2a55aa;
+}
+
+.botones.active{
+    background-color: #224488;
+}
+
+.botones.active {
+    background-color: #FF8403;
+}
+.botones.active:hover {
+    background-color: #d76e00;
+}
+.botones.active:active {
+    background-color: #ac5800;
+}
+
+.agendarBoton {
+    background-color: #00904C;
+    color: white;
+}
+
+.agendarBoton:hover {
+    background-color: #00783f;
+}
+
+.agendarBoton:active {
+    background-color: #006033;
+}
+
+.rechazarBoton {
+    background-color: #F80000;
+    color: white;
+}
+
+.close-button:hover, .rechazarBoton:hover {
+    background-color: #cf0000;
+}
+
+.close-button:active, .rechazarBoton:active {
+    background-color: #a50000;
+}
+
+.agendarBoton,
+.rechazarBoton {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.rooms-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.intervalos-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.intervalos {
+    text-align: left;
+    display: flex;
+    font-size: 10px;
+}
+
+.room-item {
+    width: calc(100%/3);
+}
+
+h3 {
+    color: black;
+}
+
+.hora-container {
+    display: flex;
+    align-items: center;
+    /* Alinea verticalmente al centro */
+    border: 0;
+}
+
+.hora-container span {
+    margin-right: 8px;
+    /* Espacio entre la hora y el ícono */
+}
+
+.editar-horas {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #007bff;
+}
+
+.editar-horas i {
+    font-size: 16px;
+}
+
+input[type="time"] {
+    font-size: 14px;
+    font-family: "Work Sans", serif;
+}
+
+@media (max-width: 992px) {
+    .botones {
+        margin-right: 8%;
+    }
+}
+
+@media (max-width: 992px) and (max-height: 600px) {
+    .botones {
+        margin-right: 8%;
+    }
+}
+

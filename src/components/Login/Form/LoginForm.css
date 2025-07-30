@@ -1,0 +1,109 @@
+.formContainer {
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 65vh; 
+    width: 100%; 
+    max-width: 600px; 
+    padding: 20px; 
+    border-radius: 8px; 
+    position: relative;
+}
+
+.formContainer .background{
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    object-fit: contain; /* Esto asegura que la imagen no se recorte */
+    z-index: -1; /* Asegura que la imagen esté detrás de otros elementos */
+}
+
+.title-login-form {
+    margin-bottom: 5%;
+    font-size: 2em; /* Tamaño de fuente relativo */
+}
+
+.FormInput {
+    margin-bottom: 5%;
+    height: 40px; 
+    width: 90%; /* Ancho relativo */
+    align-self: center;
+    padding: 10px; /* Padding interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+.input-login-page::placeholder {
+    color: #5AC1DD; /* Color del placeholder */
+}
+
+.button-login-form {
+    background-color: #5AC1DD; /* Color de fondo */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cursor tipo puntero */
+    width: 90%; /* Ancho relativo */
+    height: 40px; /* Altura fija */
+    border: none; /* Sin borde */
+    border-radius: 5%; /* Bordes redondeados */
+}
+
+.button-login-form:hover {
+    background-color: #4bacc1;
+}
+
+@media (max-width: 800px) {
+
+    .formContainer{
+        width: 70%;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .formContainer {
+        height: 70vh; 
+    }
+
+    .title-login-form {
+        font-size: 1.8em; 
+    }
+
+    .input-login-page, .button-login-form {
+        height: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .formContainer {
+        height: 60vh;
+        padding: 10px; 
+    }
+
+    .title-login-form {
+        font-size: 1.5em; 
+    }
+
+    .input-login-page, .button-login-form {
+        height: 30px; 
+    }
+}
+
+@media (max-height: 600px) {
+    .formContainer {
+        height: 100vh
+    }
+
+    .title-login-form {
+        font-size: 1.5em; 
+    }
+
+    .input-login-page, .button-login-form {
+        height: 30px; 
+    }
+}
+
