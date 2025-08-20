@@ -7,7 +7,7 @@ export const fetchSchedulesAvailable = async (request: Request) => {
     }
 
     const idRequest = request.id_solicitudes;
-    let response;
+    let response: Response;
     const assistansCount = request?.Num_asistentes || 0;
 
     if (assistansCount <= 15) {
@@ -20,7 +20,7 @@ export const fetchSchedulesAvailable = async (request: Request) => {
         throw new Error('Error al obtener los intervalos');
     }
 
-    const {data} = await response.json();
-    const schedules = data
+    const responseData = await response.json();
+    const schedules = (responseData?.data?.data ?? responseData?.data) ?? [];
     return schedules;
 };
