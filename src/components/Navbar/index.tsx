@@ -1,6 +1,6 @@
 import './Navbar.css';
 import AlcaldiaLogo from '../../assets/alcaldia.png'
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../../providers/Auth';
 
 interface Route{
