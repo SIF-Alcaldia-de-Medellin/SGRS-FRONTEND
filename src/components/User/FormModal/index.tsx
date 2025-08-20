@@ -43,20 +43,22 @@ const UserFormModal = ({closeModal}: IUserFormModalProps) => {
 
   const validateForm = () => {
     let error = false;
-    setErrors({});
+    const newErrors: IErrorsUserForm = {};
+    
     if(formData.name.length == 0){
-      setErrors({...errors, name: 'El nombre no puede estar vacio'});
+      newErrors.name = 'El nombre no puede estar vacio';
       error = true;
     }
     if(formData.lastName.length == 0){
-      setErrors({...errors, lastName: 'El apellido no puede estar vacio'});
-      error = true
+      newErrors.lastName = 'El apellido no puede estar vacio';
+      error = true;
     }
     if(formData.ministry == ''){
-      setErrors({...errors, ministry: 'Seleccione una secretaria valida'});
-      error = true
+      newErrors.ministry = 'Seleccione una secretaria valida';
+      error = true;
     }
 
+    setErrors(newErrors);
     return error;
   }
 
