@@ -1,13 +1,16 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach, Mock } from 'vitest';
 import { approveRequest, disapproveRequest } from './requestHandler'; // Cambia por la ruta correcta
 import { API_URL } from '../config/consts';
 
 describe('approveRequest', () => {
-    let fetchMock: any;
+    let fetchMock: Mock;
 
     beforeEach(() => {
         fetchMock = vi.fn();
-        global.fetch = fetchMock;
+        Object.defineProperty(window, 'fetch', {
+            value: fetchMock,
+            writable: true
+        });
     });
 
     it('should throw an error if response is not ok', async () => {
@@ -43,11 +46,14 @@ describe('approveRequest', () => {
 });
 
 describe('disapproveRequest', () => {
-    let fetchMock: any;
+    let fetchMock: Mock;
 
     beforeEach(() => {
         fetchMock = vi.fn();
-        global.fetch = fetchMock;
+        Object.defineProperty(window, 'fetch', {
+            value: fetchMock,
+            writable: true
+        });
     });
 
     it('should throw an error if response is not ok', async () => {

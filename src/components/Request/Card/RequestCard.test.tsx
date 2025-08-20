@@ -5,7 +5,7 @@ import { Request } from '../../../types';
 
 // Mock FontAwesome components
 vi.mock('@fortawesome/react-fontawesome', () => ({
-    FontAwesomeIcon: ({ icon }: { icon: any }) => (
+    FontAwesomeIcon: ({ icon }: { icon: { iconName?: string } }) => (
         <span data-testid="fontawesome-icon">
             {icon.iconName || 'icon'}
         </span>

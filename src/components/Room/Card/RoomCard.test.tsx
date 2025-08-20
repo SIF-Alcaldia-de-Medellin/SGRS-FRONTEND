@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import RoomCard from './index';
-import { Room, Intervalo } from '../../../types';
+import { Room } from '../../../types';
 
 describe('RoomCard', () => {
     const mockRoom: Room = {
@@ -143,7 +143,7 @@ describe('RoomCard', () => {
         const roomWithoutRango: Room = {
             ...mockRoom,
             intervalos: [],
-            rangoHoras: undefined as any
+            rangoHoras: undefined
         };
 
         render(

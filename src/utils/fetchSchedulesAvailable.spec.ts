@@ -1,23 +1,28 @@
 import { describe, it, expect, vi, beforeEach, Mock } from 'vitest';
 import { fetchSchedulesAvailable } from './fetchSchedulesAvailable';
 import { API_URL } from '../config/consts';
-import { Request } from '../types';
 
 const mockRequest = {
     id_solicitudes: 12345,
-    Num_asistentes: 10
+    Num_asistentes: 10,
+    Computador: false,
+    HDMI: false
 };
 
 describe('fetchSchedulesAvailable', () => {
-    let fetchMock: any;
+    let fetchMock: Mock;
 
     beforeEach(() => {
         // Reseteamos los mocks antes de cada prueba
         fetchMock = vi.fn();
-        global.fetch = fetchMock;
+        Object.defineProperty(window, 'fetch', {
+            value: fetchMock,
+            writable: true
+        });
     });
 
     it('should throw an error if request is null or undefined', async () => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         await expect(fetchSchedulesAvailable(null as any)).rejects.toThrow(
             'No se encontró solicitud o id_solicitudes no está definido.'
         );
@@ -25,7 +30,8 @@ describe('fetchSchedulesAvailable', () => {
 
     it('should throw an error if id_solicitudes is undefined', async () => {
         const invalidRequest = { ...mockRequest, id_solicitudes: undefined};
-        await expect(fetchSchedulesAvailable(invalidRequest)).rejects.toThrow(
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        await expect(fetchSchedulesAvailable(invalidRequest as any)).rejects.toThrow(
             'No se encontró solicitud o id_solicitudes no está definido.'
         );
     });

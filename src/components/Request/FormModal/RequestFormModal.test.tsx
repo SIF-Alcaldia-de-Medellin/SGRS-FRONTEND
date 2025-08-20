@@ -88,7 +88,7 @@ describe('RequestFormModal', () => {
     it('should handle undefined request gracefully', () => {
         render(
             <RequestFormModal 
-                request={undefined as any} 
+                request={undefined as Request | undefined} 
                 onClose={mockOnClose} 
             />
         );
@@ -103,7 +103,7 @@ describe('RequestFormModal', () => {
     it('should handle null request gracefully', () => {
         render(
             <RequestFormModal 
-                request={null as any} 
+                request={null as Request | null} 
                 onClose={mockOnClose} 
             />
         );

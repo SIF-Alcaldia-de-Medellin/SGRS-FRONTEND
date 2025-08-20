@@ -4,7 +4,7 @@ import Modal from './index';
 
 // Mock FontAwesome components
 vi.mock('@fortawesome/react-fontawesome', () => ({
-    FontAwesomeIcon: ({ icon, className }: { icon: any; className: string }) => (
+    FontAwesomeIcon: ({ icon, className }: { icon: { iconName?: string }; className: string }) => (
         <span data-testid="fontawesome-icon" className={className}>
             {icon.iconName || 'icon'}
         </span>

@@ -7,8 +7,10 @@ import tseslint from 'typescript-eslint'
 export default tseslint.config(
   {
     files: ['**/*.test.{ts,tsx}'],
-    env: {
-      jest: true,
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+      },
     },
   },
   { ignores: ['dist'] },

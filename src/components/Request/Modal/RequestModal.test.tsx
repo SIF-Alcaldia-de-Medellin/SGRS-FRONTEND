@@ -41,7 +41,7 @@ vi.mock('../../Loading', () => ({
 }));
 
 vi.mock('../../Room/Card', () => ({
-    default: ({ room, isSelected, onSelect }: { room: any; isSelected: boolean; onSelect: () => void }) => (
+    default: ({ room, isSelected, onSelect }: { room: { id_sala: number; nombre: string }; isSelected: boolean; onSelect: () => void }) => (
         <div 
             data-testid={`room-card-${room.id_sala}`} 
             className={isSelected ? 'selected' : ''}

@@ -37,7 +37,7 @@ vi.mock('../../../providers/Auth', () => ({
 }));
 
 vi.mock('../Card', () => ({
-    default: ({ request, onClick }: { request: any; onClick: () => void }) => (
+    default: ({ request, onClick }: { request: Request; onClick: () => void }) => (
         <div data-testid={`request-card-${request.id_solicitudes}`} onClick={onClick}>
             {request.Nombre} - {request.Correo}
         </div>
@@ -45,7 +45,7 @@ vi.mock('../Card', () => ({
 }));
 
 vi.mock('../Modal', () => ({
-    default: ({ request, onClose }: { request: any; onClose: () => void }) => (
+    default: ({ request, onClose }: { request: Request; onClose: () => void }) => (
         <div data-testid="request-modal">
             <div>Modal for: {request.Nombre}</div>
             <button onClick={onClose}>Close</button>
@@ -54,7 +54,7 @@ vi.mock('../Modal', () => ({
 }));
 
 vi.mock('../FormModal', () => ({
-    default: ({ request, onClose }: { request: any; onClose: () => void }) => (
+    default: ({ request, onClose }: { request: Request | string | null | undefined; onClose: () => void }) => (
         <div data-testid="request-form-modal">
             <div>Form Modal: {request}</div>
             <button onClick={onClose}>Close</button>
@@ -63,7 +63,7 @@ vi.mock('../FormModal', () => ({
 }));
 
 vi.mock('../../User/FormModal', () => ({
-    default: ({ request, closeModal }: { request: any; closeModal: () => void }) => (
+    default: ({ request, closeModal }: { request: Request; closeModal: () => void }) => (
         <div data-testid="user-form-modal">
             <div>User Form Modal: {request}</div>
             <button onClick={closeModal}>Close</button>
@@ -72,7 +72,7 @@ vi.mock('../../User/FormModal', () => ({
 }));
 
 vi.mock('../../Dropdown', () => ({
-    default: ({ options, onChange }: { options: any[]; onChange: (e: any) => void }) => (
+    default: ({ options, onChange }: { options: Array<{ value: string; label: string }>; onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void }) => (
         <select data-testid="state-dropdown" onChange={onChange}>
             {options.map((option, index) => (
                 <option key={index} value={option.value}>
@@ -96,7 +96,7 @@ Object.defineProperty(window, 'fetch', {
 
 // Mock FontAwesome
 vi.mock('@fortawesome/react-fontawesome', () => ({
-    FontAwesomeIcon: ({ icon }: { icon: any }) => <span data-testid="icon">{icon.iconName}</span>
+    FontAwesomeIcon: ({ icon }: { icon: { iconName?: string } }) => <span data-testid="icon">{icon.iconName}</span>
 }));
 
 vi.mock('@fortawesome/free-solid-svg-icons', () => ({
