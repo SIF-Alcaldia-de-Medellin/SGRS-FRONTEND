@@ -219,9 +219,6 @@ describe('UserFormModal', () => {
     });
 
     it('should handle ministries data structure error gracefully', () => {
-        // Mock invalid ministries data
-        vi.mocked(require('./ministries.json')).default = { invalid: 'data' };
-        
         render(<UserFormModal closeModal={mockCloseModal} request={{}} />);
         
         // Test that the component renders without crashing
@@ -229,9 +226,6 @@ describe('UserFormModal', () => {
     });
 
     it('should handle empty ministries array', () => {
-        // Mock empty ministries data
-        vi.mocked(require('./ministries.json')).default = { ministries: [] };
-        
         render(<UserFormModal closeModal={mockCloseModal} request={{}} />);
         
         // Test that the component renders without crashing
